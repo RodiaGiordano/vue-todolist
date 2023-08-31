@@ -21,7 +21,7 @@
     <div class="wrapper container" id="app">
 
         <ul class="list-group">
-            <li v-for='toDoEl in toDoList' class="list-group-item my-1">An item</li>
+            <li v-for='(toDoEl, index) in toDoList' class='list-group-item' :class="toDoList[index].done ? 'done' : ''">{{ toDoList[index].text }}</li>
             
           </ul>
         
