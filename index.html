@@ -20,10 +20,19 @@
 <body>
     <div class="wrapper container" id="app">
 
+        <div class="input-group mb-3">
+            <input v-model="newtext" type="text" class="form-control" placeholder="Aggiungi qualcosa da fare" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2" @click="newToDo()">Aggiungi task</span>
+          </div>
+
+
         <ul class="list-group">
-            <li v-for='(toDoEl, index) in toDoList' class='list-group-item' :class="toDoList[index].done ? 'done' : ''">
-                {{ toDoList[index].text }}
-                <i class="fa-solid fa-trash-can trash"></i>
+            <li v-for='(toDoEl, index) in toDoList' class='list-group-item' :class="toDoEl.done ? 'done' : ''">
+                
+                    {{ toDoEl.text }}
+                
+
+                <i class="fa-solid fa-trash-can trash" @click="cancelEl(index)"></i>
             </li>
             
             

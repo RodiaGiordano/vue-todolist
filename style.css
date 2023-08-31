@@ -6,7 +6,7 @@ ul > li{
     clear: both;
     display: table;
     content: '';
-    
+    cursor: pointer;
 }
 
 
