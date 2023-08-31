@@ -7,7 +7,7 @@ createApp({
 
             {
                 text: 'Fare la spesa',
-                done: true,
+                done: false,
             },
             {
                 text: 'lavare i piatti',
@@ -42,8 +42,11 @@ createApp({
             done: false,
         })
 
-              
-        
+       },
+
+       doneEl(index){
+                
+        this.toDoList[index].done ? this.toDoList[index].done = false : this.toDoList[index].done = true;
        }
     }
     
