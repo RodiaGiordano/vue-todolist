@@ -27,9 +27,12 @@
 
 
         <ul class="list-group">
-            <li v-for='(toDoEl, index) in toDoList' class='list-group-item' :class="toDoEl.done ? 'done' : '' " @click="doneEl(index)">
+            <li v-for='(toDoEl, index) in toDoList' class='list-group-item' :class="toDoEl.done ? 'done' : '' ">
                 
+                <span  @click="doneEl(index)">
                     {{ toDoEl.text }}
+                </span>
+                        
                 <i class="fa-solid fa-trash-can trash" @click="cancelEl(index)"></i>
             </li>
                 
