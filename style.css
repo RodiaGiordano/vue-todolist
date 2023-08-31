@@ -1,3 +1,15 @@
 .done{
     text-decoration: line-through;
 }
+
+ul > li{
+    clear: both;
+    display: table;
+    content: '';
+    
+}
+
+
+.trash{
+    float: right;
+}
