@@ -23,8 +23,9 @@ createApp({
             },
 
         ],       
-
+        
         newtext: '',
+        
         
 
     }
@@ -37,12 +38,17 @@ createApp({
         },
     
         newToDo(){
+
             this.toDoList.push({
                 text: this.newtext,
                 done: false,
+        
             })
+                
+            
             
             this.newtext = ''
+            
        },
 
        doneEl(index){
