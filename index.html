@@ -21,7 +21,7 @@
     <div class="wrapper container" id="app">
 
         <div class="input-group mb-3">
-            <input v-model="newtext" type="text" class="form-control" placeholder="Aggiungi qualcosa da fare" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <input @keyup.enter="newToDo()" v-model="newtext" type="text" class="form-control" placeholder="Aggiungi qualcosa da fare" aria-label="Recipient's username" aria-describedby="basic-addon2">
             <span class="input-group-text" id="basic-addon2" @click="newToDo()">Aggiungi task</span>
           </div>
 
